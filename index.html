@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsor Dashboard Wireframe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand">
+        <div class="brand-mark">SM</div>
+        <div>
+          <p class="eyebrow">Prototype Website</p>
+          <h1>Sponsor Dashboard</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <label class="field compact-field">
+          <span>Campaign</span>
+          <select>
+            <option>Foothill South</option>
+            <option>North Ridge</option>
+          </select>
+        </label>
+        <div class="account-card">Acme Clean Air Fund</div>
+        <button class="primary-button">Save Changes</button>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="panel zones-panel">
+        <div class="panel-header">
+          <p class="eyebrow">1. Edit reward locations</p>
+          <h2>Reward Zone Editor</h2>
+        </div>
+
+        <div class="zone-list">
+          <div class="zone-item selected">
+            <div>
+              <strong>Zone A</strong>
+              <p>Foothill Park perimeter</p>
+            </div>
+            <span>Active</span>
+          </div>
+          <div class="zone-item">
+            <div>
+              <strong>Zone B</strong>
+              <p>Canyon east corridor</p>
+            </div>
+            <span>Draft</span>
+          </div>
+          <button class="ghost-button">+ Add New Zone</button>
+        </div>
+
+        <form class="zone-form">
+          <label class="field">
+            <span>Longitude</span>
+            <input type="text" value="-122.084">
+          </label>
+          <label class="field">
+            <span>Latitude</span>
+            <input type="text" value="37.422">
+          </label>
+          <label class="field">
+            <span>Radius (meters)</span>
+            <input type="text" value="1500">
+          </label>
+          <div class="button-row">
+            <button type="button" class="secondary-button">Update Zone</button>
+            <button type="button" class="ghost-button">Delete</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel map-panel">
+        <div class="panel-header">
+          <p class="eyebrow">Preview</p>
+          <h2>Map Preview</h2>
+        </div>
+        <div class="map-canvas">
+          <div class="grid-overlay"></div>
+          <div class="map-label top-left">lon / lat click point</div>
+          <div class="map-label bottom-right">Radius circle overlay</div>
+          <div class="zone-circle large"></div>
+          <div class="zone-circle small"></div>
+          <div class="zone-pin primary"></div>
+          <div class="zone-pin secondary"></div>
+        </div>
+        <p class="panel-note">Click on the map to place a zone center, then adjust radius in the form.</p>
+      </section>
+
+      <section class="panel settings-panel">
+        <div class="panel-header">
+          <p class="eyebrow">2. Edit reward amount</p>
+          <h2>Reward Settings</h2>
+        </div>
+
+        <form class="settings-form">
+          <label class="field">
+            <span>Reward per Hour (USD)</span>
+            <input type="text" value="25.00">
+          </label>
+          <label class="field">
+            <span>Total Budget Limit (USD)</span>
+            <input type="text" value="5000">
+          </label>
+          <div class="metric-card">
+            <span>Estimated Hourly Payout</span>
+            <strong>$175</strong>
+          </div>
+          <div class="metric-card">
+            <span>Currently Active Sensors</span>
+            <strong>7</strong>
+          </div>
+          <button type="button" class="primary-button full-width">Apply Settings</button>
+        </form>
+      </section>
+    </main>
+
+    <section class="panel history-panel">
+      <div class="panel-header">
+        <p class="eyebrow">3. View reward history</p>
+        <h2>Reward Distribution History</h2>
+      </div>
+
+      <div class="history-toolbar">
+        <label class="field compact-field">
+          <span>Date Range</span>
+          <select>
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+          </select>
+        </label>
+        <label class="field compact-field">
+          <span>Zone</span>
+          <select>
+            <option>All zones</option>
+            <option>Zone A</option>
+            <option>Zone B</option>
+          </select>
+        </label>
+        <label class="field compact-field">
+          <span>Status</span>
+          <select>
+            <option>All</option>
+            <option>Paid</option>
+            <option>Pending</option>
+          </select>
+        </label>
+        <button class="ghost-button">Export CSV</button>
+      </div>
+
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Zone</th>
+              <th>Sensors Rewarded</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-03-03 14:00</td>
+              <td>Zone A</td>
+              <td>7</td>
+              <td>$175</td>
+              <td><span class="status-pill paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>2026-03-03 13:00</td>
+              <td>Zone A</td>
+              <td>6</td>
+              <td>$150</td>
+              <td><span class="status-pill paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>2026-03-03 12:00</td>
+              <td>Zone B</td>
+              <td>3</td>
+              <td>$75</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
