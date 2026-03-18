@@ -13,6 +13,26 @@ type Props = {
   params: Promise<{ campaignId: string }>;
 };
 
+export async function GET(_: NextRequest, { params }: Props) {
+  const auth = await requireAuth(["sponsor"]);
+  if (auth.error) return auth.error;
+
+  const { campaignId } = await params;
+  const supabase = await createServerSupabaseClient();
+
+  const { data, error } = await supabase
+    .from("sponsor_campaigns")
+    .select("id, name, status, hourly_reward_amount, budget_limit, spent_budget, updated_at")
+    .eq("id", campaignId)
+    .single();
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  }
+
+  return NextResponse.json({ item: data });
+}
+
 export async function PATCH(request: NextRequest, { params }: Props) {
   const auth = await requireAuth(["sponsor"]);
   if (auth.error) return auth.error;

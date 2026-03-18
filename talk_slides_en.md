@@ -10,6 +10,9 @@
 **Opening line (speaker cue):**
 - Wildfire smoke often reaches communities before flames do, but sensing and connectivity coverage do not always exist where they are most needed.
 
+**Possible audience question:**
+- Why is wildfire smoke monitoring the right place to introduce a new incentive mechanism instead of simply expanding existing public monitoring networks?
+
 ---
 
 ## Slide 2 - Why This Matters (Problem Context)
@@ -23,18 +26,25 @@
 **Speaker cue:**
 - The challenge is not only sensor technology; it is where sensors are deployed and whether they stay online.
 
+**Possible audience question:**
+- Do we have evidence that current coverage gaps are large enough to justify a new coordination system?
+
 ---
 
 ## Slide 3 - Current Gaps in Monitoring
 **What Is Missing in Existing Approaches?**
 
 - Fixed government stations: high quality, but expensive and sparse
-- Community sensors (e.g., PurpleAir): useful, but placement is not optimized for risk coverage
+- Community sensors (e.g., PurpleAir): large in scale, but placement is still not optimized for risk coverage
+- PurpleAir currently advertises about 35,000 sensors worldwide, yet the network grows where volunteers buy devices, not where smoke exposure risk is highest
 - Network connectivity is uneven (WiFi / cellular / hotspot availability varies)
 - No strong mechanism to coordinate private devices for public monitoring goals
 
 **Key message:**
 - We have pieces of the system, but not a mechanism to align them.
+
+**Possible audience question:**
+- If PurpleAir and public stations already exist, what exact failure remains unsolved?
 
 ---
 
@@ -48,6 +58,9 @@
 
 **Key message:**
 - Incentives should reward verified public monitoring contribution, not just device ownership.
+
+**Possible audience question:**
+- Why do we need incentives at all? Would volunteers or public agencies not be sufficient?
 
 ---
 
@@ -69,6 +82,9 @@
 **Speaker cue:**
 - The platform is the coordination layer, but the infrastructure can remain community-owned.
 
+**Possible audience question:**
+- What motivates each actor to keep participating after the initial novelty wears off?
+
 ---
 
 ## Slide 6 - System Architecture (End-to-End)
@@ -83,6 +99,9 @@
 
 **Data flow (for diagram):**
 - Sensor -> Network -> Platform -> Dashboard / Alerts / Public AQ tools
+
+**Possible audience question:**
+- Where is the hardest technical bottleneck in this pipeline: device onboarding, network reliability, or reward verification?
 
 ---
 
@@ -104,6 +123,9 @@
 **Key message:**
 - This aligns deployment, operation, and connectivity incentives at the same time.
 
+**Possible audience question:**
+- Could multiple reward layers make the system too complicated for ordinary participants to understand?
+
 ---
 
 ## Slide 8 - Example Reward Formula
@@ -124,6 +146,9 @@
 **Speaker cue:**
 - The exact weights can be tuned by sponsor goals (public health, emergency response, cost control).
 
+**Possible audience question:**
+- How do you choose the weights without creating unfair payouts or unintended gaming behavior?
+
 ---
 
 ## Slide 9 - Verification and Anti-Gaming
@@ -143,6 +168,9 @@
 **Key message:**
 - A reward system without verification will optimize for gaming, not coverage.
 
+**Possible audience question:**
+- How strong is the verification in practice if users can register anonymously?
+
 ---
 
 ## Slide 10 - Prototype Website
@@ -155,6 +183,9 @@
 
 **Key workflow:**
 - Register device -> Join target area -> Stay online -> Receive hourly rewards
+
+**Possible audience question:**
+- Why should sponsors trust an anonymous, hourly reward system with real money or real budgets?
 
 ---
 
@@ -170,6 +201,9 @@
   - Flood sensing
   - Neighborhood air quality
 
+**Possible audience question:**
+- Is this actually scalable, or does it only work in a small pilot with a highly engaged community?
+
 ---
 
 ## Slide 12 - Challenges and Open Questions
@@ -184,6 +218,9 @@
 **Key message:**
 - Technical feasibility is only one part; governance and incentive design determine real-world success.
 
+**Possible audience question:**
+- Which of these open problems is the biggest blocker to real deployment today?
+
 ---
 
 ## Slide 13 - Conclusion
@@ -197,6 +234,9 @@
 **Closing line (speaker cue):**
 - If we can reward the right contribution in the right place, community-owned infrastructure can become a practical layer of wildfire smoke resilience.
 
+**Possible audience question:**
+- What is the minimum proof you still need before claiming this is a viable deployment model rather than just a concept?
+
 ---
 
 ## Slide 14 - Q&A
@@ -204,6 +244,9 @@
 
 - Thank you
 - Contact: jyunfan@dorgie.com / lab website
+
+**Possible audience question to invite:**
+- Which part would you challenge first: the incentive model, the verification model, or the operational feasibility?
 
 ---
 
@@ -215,3 +258,6 @@
 - Reward cost per unit coverage improvement
 - False positive / false negative rates
 - Retention rate of sensor owners and network providers
+
+**Possible audience question:**
+- Which metric would most clearly show that incentives outperform simple flat subsidies or volunteer deployment?
