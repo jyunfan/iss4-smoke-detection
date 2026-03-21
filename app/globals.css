@@ -153,6 +153,13 @@ main {
   box-shadow: 0 20px 48px rgba(47, 34, 15, 0.08);
 }
 
+.hero-panel.owner-hero {
+  background:
+    linear-gradient(135deg, rgba(27, 116, 94, 0.12), rgba(255, 255, 255, 0.94)),
+    var(--panel);
+  border-color: rgba(27, 116, 94, 0.14);
+}
+
 .dashboard-two-col {
   display: grid;
   grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
