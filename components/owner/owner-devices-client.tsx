@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
+import { SENSOR_PROVIDERS, SENSOR_PROVIDER_LABELS, getSensorProviderLabel } from "@/lib/sensors/providers";
 
 type DeviceItem = {
   id: string;
@@ -91,8 +92,8 @@ export function OwnerDevicesClient() {
             <p className="eyebrow">Sensor Fleet</p>
             <h1>My Devices</h1>
             <p className="muted max-copy">
-              Register PurpleAir devices, confirm which sensors are active, and keep your participation footprint
-              visible before joining any reward zone.
+              Register PurpleAir or AirGradient devices, confirm which sensors are active, and keep your
+              participation footprint visible before joining any reward zone.
             </p>
           </div>
           <div className="metric-box">
@@ -123,7 +124,11 @@ export function OwnerDevicesClient() {
             <label className="stack tight">
               <span>Provider</span>
               <select className="input" value={form.provider} onChange={(event) => updateField("provider", event.target.value)}>
-                <option value="purpleair">PurpleAir</option>
+                {SENSOR_PROVIDERS.map((provider) => (
+                  <option key={provider} value={provider}>
+                    {SENSOR_PROVIDER_LABELS[provider]}
+                  </option>
+                ))}
               </select>
             </label>
 
@@ -165,7 +170,7 @@ export function OwnerDevicesClient() {
                       <span className="pill">{device.status}</span>
                     </div>
                     <p className="muted small-text">
-                      Provider {device.provider} · External ID <code>{device.external_device_id}</code>
+                      Provider {getSensorProviderLabel(device.provider)} · External ID <code>{device.external_device_id}</code>
                     </p>
                   </div>
                   <div className="right-text">

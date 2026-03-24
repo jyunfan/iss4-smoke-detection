@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAuth } from "@/lib/auth/guards";
 import { createServerSupabaseClient } from "@/lib/supabase/server";
+import { SENSOR_PROVIDERS } from "@/lib/sensors/providers";
 
 const createDeviceSchema = z.object({
   externalDeviceId: z.string().min(1),
-  provider: z.string().default("purpleair"),
+  provider: z.enum(SENSOR_PROVIDERS).default("purpleair"),
   nickname: z.string().max(120).optional()
 });
 

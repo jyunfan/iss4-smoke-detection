@@ -42,7 +42,7 @@ Registered air sensors owned by a sensor owner.
 sensor_devices (
   id uuid primary key default gen_random_uuid(),
   owner_user_id uuid not null references app_users(id),
-  external_device_id text not null,     -- PurpleAir id or external provider id
+  external_device_id text not null,     -- PurpleAir / AirGradient / external provider id
   provider text not null default 'purpleair',
   nickname text,
   install_lon double precision,
