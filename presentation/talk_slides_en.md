@@ -231,7 +231,7 @@ paginate: true
 <!-- slide-id: Slide 10C - Sensor Owner Rewards -->
 # Sensor Owner Workflow: Reward History Builds Trust
 
-![w:1050](SensorOwnerRewards.png)
+![w:550](SensorOwnerRewards.png)
 
 - Owners can see payout rows, participating zones, and total earnings
 - The ledger view helps explain why rewards were issued and whether participation stayed eligible
@@ -300,8 +300,6 @@ Thank you
 
 <!-- presenter-notes: Invite the audience to challenge the incentive model, the verification model, or the operational feasibility. -->
 <!-- speech-script: I would be especially interested in feedback on three parts of this proposal: the incentive design, the verification model, and the operational path to deployment. -->
-
----
 
 <!-- slide-id: Optional Appendix (if asked)
 **Possible Metrics for Future Experiments**
